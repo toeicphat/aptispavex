@@ -99,7 +99,9 @@ const SpeakingPart3Practice: React.FC<{ onBack: () => void }> = ({ onBack }) => 
         setIsGeneratingImages(true);
         setGeneratedImageUrls([null, null]);
         try {
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GOOGLE_API_KEY
+});
             // Split topic into two prompts for comparison
             const prompts = topic.topic.split(/[\/&]| or /).map(s => s.trim());
             const prompt1 = prompts[0] || "first scene";
