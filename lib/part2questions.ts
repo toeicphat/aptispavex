@@ -1,0 +1,48 @@
+export interface Part2QuestionSet {
+    id: number;
+    topic: string;
+    questions: string[];
+}
+
+export const speakingPart2Questions: Part2QuestionSet[] = [
+    { id: 1, topic: "A group of friends having a meal in a restaurant/ an eatery", questions: ["Describe the picture.", "Why do people like eating out with friends?", "Please talk about the last time you ate with friends."] },
+    { id: 2, topic: "A family in a car", questions: ["Describe this picture.", "Tell me the last time you traveled in a car.", "How can people overcome the time of a long journey?"] },
+    { id: 3, topic: "Sitting in front of a smart TV and holding a remote control", questions: ["Describe this picture.", "How often do you watch films or programs at home? Why?", "Which is better for learning, watching videos, or reading? Why?"] },
+    { id: 4, topic: "Three people lying on a grassland and reading", questions: ["Describe this picture.", "What do you usually read?", "Why is reading important for children?"] },
+    { id: 5, topic: "A mother carrying her child", questions: ["Describe this picture.", "When was the last time you visited a new place?", "Why do people like to go to new places?"] },
+    { id: 6, topic: "A couple cleaning their house", questions: ["Please describe what you see in the picture.", "Describe the last time you did some physical work.", "Do you think machines will do all our hard work in the future? Why?"] },
+    { id: 7, topic: "A group of people in the meeting room", questions: ["Describe this picture.", "Tell us about the time you gave a presentation. How did you feel?", "Why are people scared of public speaking?"] },
+    { id: 8, topic: "Playing football/ soccer", questions: ["Describe this picture.", "What are the benefits of outdoor activities?", "Why do many people like outdoor activities?"] },
+    { id: 9, topic: "Art exhibition", questions: ["Describe this picture.", "What are the benefits of viewing artworks?", "Why do people like to go to art exhibitions?"] },
+    { id: 10, topic: "A woman in a supermarket", questions: ["Describe the picture.", "Tell me the time you went to the supermarket.", "Do you often go shopping in the supermarket?"] },
+    { id: 11, topic: "A journalist interviewing a man", questions: ["Describe the picture.", "Do you prefer reading newspapers or watching the news?", "Why do people need to watch the news?"] },
+    { id: 12, topic: "A family sitting in front of a computer", questions: ["Describe the picture.", "Tell me the last time you used a computer.", "Should children use computers?"] },
+    { id: 13, topic: "People are crossing the street", questions: ["Describe the picture.", "Tell me the last time you crossed the street.", "Why are some people scared of crossing the street?"] },
+    { id: 14, topic: "A cooking class", questions: ["Describe this picture.", "How do people learn to cook in your culture?", "Why is it important for people to learn how to cook for themselves?"] },
+    { id: 15, topic: "Kids playing outside", questions: ["Describe this picture.", "Tell me about a game you played when you were a child.", "How have children's games changed in the last 50 years?"] },
+    { id: 16, topic: "On a public transport", questions: ["Describe the picture.", "How often do you use public transport?", "Should people use public transport more?"] },
+    { id: 17, topic: "Cooking in the kitchen", questions: ["Describe the picture.", "The last time you did housework?", "Why do people dislike doing jobs at home?"] },
+    { id: 18, topic: "A man on a train", questions: ["Please describe the picture.", "Tell me the last time you traveled by public transport.", "Do you often use public transportation to travel?"] },
+    { id: 19, topic: "A teacher in a classroom", questions: ["Describe the picture.", "Tell me about the last time you studied something in class.", "How can teachers make the lessons interesting?"] },
+    { id: 20, topic: "Eating in a restaurant", questions: ["Describe the picture.", "Tell me the last time you ate out.", "How important is it that young people should learn to cook?"] },
+    { id: 21, topic: "Hiking", questions: ["Describe the picture.", "Tell me about a time when you went somewhere with your friends.", "What is the benefit of doing/working with others?"] },
+    { id: 22, topic: "Having a meal together", questions: ["Describe the picture.", "When was the last time you had meals with your family?", "Why is it important to have family meals together?"] },
+    { id: 23, topic: "Riding a horse", questions: ["Describe the picture.", "Tell me about an animal that you like.", "How important are animals in our lives?"] },
+    { id: 24, topic: "Viewing paintings in a gallery", questions: ["Describe the picture.", "What are the benefits of looking at art?", "Why do people like going to exhibitions?"] },
+    { id: 25, topic: "Having a meal together", questions: ["Describe the picture.", "Tell me the last time you went to a restaurant with your friends.", "Why do people enjoy eating out with their friends?"] },
+    { id: 26, topic: "A group of friends having coffee", questions: ["Describe the picture.", "Do you often spend time drinking coffee with your friends?", "Do people in your country have this habit?"] },
+    { id: 27, topic: "Shopping", questions: ["Describe the picture.", "Tell me the last time you went shopping.", "Why do some people not like busy places?"] },
+    { id: 28, topic: "Decorating a room", questions: ["Describe the picture.", "When was the last time you decorated your room?", "Why do people like to change the way their house looks?"] },
+    { id: 29, topic: "On a bus/ On a trip", questions: ["Describe the picture.", "Tell me about the last time you traveled with a group.", "What are the benefits of traveling with a group?"] },
+    { id: 30, topic: "Exploring", questions: ["Describe the picture.", "Tell me about a time you visited a new place.", "Why do people like to go to new places?"] },
+    { id: 31, topic: "A family on their vehicle", questions: ["Describe the picture.", "Tell me the last time you were in a car.", "How can people pass the time on a long drive?"] },
+    { id: 32, topic: "Public speaking", questions: ["Describe the picture.", "Tell me about the last time you spoke in public.", "Why do some people feel worried about public speaking?"] },
+    { id: 33, topic: "Reading/ lying on grass", questions: ["Describe the picture.", "Do you think it's important for people to relax?", "How do you relax?"] },
+    { id: 34, topic: "An artist is painting", questions: ["Describe the picture.", "Why do people enjoy art?", "Tell me about a time you saw a piece of art."] },
+    { id: 35, topic: "A man talking on a phone", questions: ["Describe the picture.", "Tell me about a time you made a phone call.", "Do you think text messages will replace phone calls in the future?"] },
+    { id: 36, topic: "Riding a bike", questions: ["Describe the picture.", "Why is it important for family members to spend time together?", "How do parents and children usually spend time together?"] },
+    { id: 37, topic: "Sending a gift", questions: ["Describe the picture.", "A time you received a gift.", "Do you think it is important to give gifts at special events?"] },
+    { id: 38, topic: "A man writing a letter", questions: ["Describe the picture.", "Tell me the last time you wrote a letter.", "Do you think people will write letters in the future?"] },
+    { id: 39, topic: "Spending time together", questions: ["Describe the picture.", "Do you think it is important for parents to play with their children?", "How do parents and children spend time together?"] },
+    { id: 40, topic: "In a cinema", questions: ["Describe the picture.", "Tell me a time you laughed a lot.", "Do you think people from different countries laugh at different things?"] },
+];

@@ -1,0 +1,7 @@
+{
+  "name": "APTIS Pavex",
+  "description": "A comprehensive platform to practice and prepare for the APTIS ESOL exam, covering listening, reading,speaking, writing, and grammar sections.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

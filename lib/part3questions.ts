@@ -1,0 +1,51 @@
+export interface Part3QuestionSet {
+    id: number;
+    topic: string;
+    questions: string[];
+}
+
+export const speakingPart3Questions: Part3QuestionSet[] = [
+    { id: 1, topic: "Eating salad & pizza", questions: ["Tell me what you see from the two pictures.", "Do you prefer eating at home or eating out?", "Why do people now like eating unhealthy food?"] },
+    { id: 2, topic: "Transportation", questions: ["Tell me what you see in two pictures.", "What is it like to travel in these two pictures?", "Which way of traveling do you like better?"] },
+    { id: 3, topic: "Traditional books/ E-books", questions: ["Tell me what you see from the two pictures.", "Do you prefer reading printed books or e-books?", "Does technology affect the way we read books?"] },
+    { id: 4, topic: "Playing football/pole-jumping", questions: ["Tell me what you see from the two pictures.", "Which sports do you prefer?"] },
+    { id: 5, topic: "Disabled people/ Elderly playing sport", questions: ["Tell me what you see from the two pictures.", "Which of these sports would you prefer to play?", "Do you think that playing sports is not limited to all different kinds of people?"] },
+    { id: 6, topic: "Two different kinds of job", questions: ["What do you see in the two pictures?", "Would both of these jobs be well-paid?", "Which of these two jobs would be more fun to do? Why?"] },
+    { id: 7, topic: "Housing", questions: ["Tell me what you see in the two pictures.", "What would it be like living in these two places?", "Which of these two places would it be better for old people to live in? Why?"] },
+    { id: 8, topic: "Children visiting a museum and playing at a park", questions: ["Describe the pictures.", "Which of these two activities should young children join?(prefer)", "Why is learning through play considered the most effective way of teaching children?"] },
+    { id: 9, topic: "Riding a camel/ a horse", questions: ["Tell me what you see from the two pictures.", "Have you ever ridden a camel or a horse before?", "Is riding animals popular in your country?"] },
+    { id: 10, topic: "Playing games with friends/ alone", questions: ["Describe the picture.", "What are the attractions of these different types of games?", "Some people think playing computer games is hard for children. What do you think?"] },
+    { id: 11, topic: "Listening to music alone/ at a concert", questions: ["Tell me what you see in the two pictures.", "How are the experiences different in these two situations?", "Why do you think people listen to music?"] },
+    { id: 12, topic: "Playing with animals", questions: ["Tell me what you see in the two pictures.", "Do you often play with animals like that?", "Do you think it is important for children to learn about animals?"] },
+    { id: 13, topic: "Outdoor/ indoor activities", questions: ["Describe the pictures.", "Which of the two activities is better for students?", "What are the benefits of those activities?"] },
+    { id: 14, topic: "Children playing indoor and outdoor", questions: ["Tell me what you see in the two pictures.", "Now do children benefit from spending time in these ways?", "Why is it important for children to play together?"] },
+    { id: 15, topic: "Living in a city/ countryside", questions: ["Tell me what you see in two pictures.", "What are the differences between living in these two places?", "What is a good neighborhood?"] },
+    { id: 16, topic: "Eating out/ eating at home", questions: ["Describe the pictures.", "What are the difficulties of eating in these places?", "Why do people dislike eating alone?"] },
+    { id: 17, topic: "Living in an old house/ a modern house", questions: ["Describe the pictures.", "Which room do you prefer to live in?", "Why do people like decorating their houses?"] },
+    { id: 18, topic: "Studying in a group/ studying alone", questions: ["Tell me what you see from two pictures.", "What are the difficulties when studying in these places?", "There is too much noise in our modern lives? Do you agree/disagree?"] },
+    { id: 19, topic: "Season", questions: ["Tell me what you see from two pictures.", "What types of people live in these two places?", "Which place do you prefer?"] },
+    { id: 20, topic: "House/ Department", questions: ["Describe the pictures.", "What's the difference between the two places?", "What is the characteristic of a comfortable house?"] },
+    { id: 21, topic: "Travel by airplane/ train", questions: ["Describe the pictures.", "Which means of transport do you prefer? Why?", "Why do people usually not choose to travel by plane?"] },
+    { id: 22, topic: "Places to have meals", questions: ["Describe the pictures.", "What are the benefits of each type of eating?", "People say that it is better to eat with others than to eat alone. What do you think?"] },
+    { id: 23, topic: "Hiking on a mountain/ Visiting a beach", questions: ["Tell me what you see in the two pictures.", "What's so attractive about these two places?", "How to protect natural beauty?"] },
+    { id: 24, topic: "Family on a vacation", questions: ["Describe these two pictures.", "What types of people live in these two places?", "Which place do you prefer?"] },
+    { id: 25, topic: "Team/ Individual", questions: ["Describe the pictures.", "What are some of the difficulties of these two sports?", "Why do some people prefer team sports to individual sports?"] },
+    { id: 26, topic: "Outdoor activities", questions: ["Describe the pictures in the same file.", "What are the attractions of visiting these two places?", "What are the benefits of outdoor activities?"] },
+    { id: 27, topic: "Shopping", questions: ["Describe the pictures.", "What are the advantages of shopping in these two places?", "Some people don't like shopping. Why do you think this is?"] },
+    { id: 28, topic: "Serving", questions: ["Tell me what you see in the two pictures.", "What are the attractions of eating in these different places?", "Why do some people like to eat out on special occasions?"] },
+    { id: 29, topic: "Animals", questions: ["Describe the pictures.", "Do people need to love animals?"] },
+    { id: 30, topic: "Travelling alone/ with friends", questions: ["Describe the pictures.", "What are the benefits of these two ways of traveling?", "Which one do you like better?"] },
+    { id: 31, topic: "Music", questions: ["Describe the pictures.", "Why is it important to listen to music?"] },
+    { id: 32, topic: "A close friend/ A group of friends", questions: ["Describe the pictures.", "How is spending time with one best friend different from spending time with a group of friends?", "Has social media changed friendships? Why?"] },
+    { id: 33, topic: "Physical activities", questions: ["Describe the pictures.", "What is the difference between each of these sports?", "What sport do you like in the pictures? Why?"] },
+    { id: 34, topic: "Remote study/ On-site study", questions: ["Describe the pictures.", "Which place looks better to learn in?"] },
+    { id: 35, topic: "Countryside/ City", questions: ["Describe the pictures.", "Do you prefer spending your free time in the countryside or city?", "Which of these two places would be better for children to grow up in? Why?"] },
+    { id: 36, topic: "Workplaces", questions: ["Describe the pictures.", "Which one do you prefer?", "Has the workplace changed a lot during the past 50 years?"] },
+    { id: 37, topic: "Shopping/ Buying stuff", questions: ["Describe the pictures.", "What are the benefits of buying in those two places?", "Where will people buy more in the future?"] },
+    { id: 38, topic: "Paying methods", questions: ["Describe the pictures.", "What are the benefits of buying in those two places?", "In the future, do you think there will still be purchases from the shop?"] },
+    { id: 39, topic: "Old and modern workplaces", questions: ["Describe the pictures.", "What are some advantages of working in these two environments?", "Why has the working environment changed throughout history?"] },
+    { id: 40, topic: "Ways to relax", questions: ["Describe the pictures.", "Which one do you prefer?", "Reading books or playing games, which is better?"] },
+    { id: 41, topic: "Concert/ Events", questions: ["Describe the pictures.", "What sort of people go to these two events?", "Which of these two events would you prefer to go to? Why?"] },
+    { id: 42, topic: "Watching movies", questions: ["Describe the pictures.", "Which of these two places would you prefer to watch a film?", "What kind of people go to these two places?"] },
+    { id: 43, topic: "Store and Supermarket", questions: ["Describe the pictures.", "What sort of people shop in these two places?", "Which of these two places would you prefer to shop in? Why?"] }
+];
