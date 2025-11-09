@@ -103,7 +103,7 @@ const ai = new GoogleGenAI({
   apiKey: import.meta.env.VITE_GOOGLE_API_KEY
 });
             const response = await ai.models.generateImages({
-                model: 'imagen-4.0-generate-001',
+                model: 'gemini-2.5-flash',
                 prompt: `A photorealistic image depicting: ${topic.topic}`,
                 config: {
                   numberOfImages: 1,
