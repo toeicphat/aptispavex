@@ -109,7 +109,7 @@ const ai = new GoogleGenAI({
 
             const generate = async (p: string) => {
                 const response = await ai.models.generateImages({
-                    model: 'imagen-4.0-generate-001',
+                    model: 'gemini-2.5-flash',
                     prompt: `A photorealistic image depicting: ${p}. The image should be suitable for a side-by-side comparison.`,
                     config: {
                         numberOfImages: 1,
