@@ -159,7 +159,9 @@ const WritingPart2And3Practice: React.FC<WritingPart2And3PracticeProps> = ({ onB
 
         if (!isFullTestMode) { // Perform AI evaluation only in standalone practice mode
             try {
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GOOGLE_API_KEY
+});
                 
                 const part3PromptDetails = part3Questions.map((q, i) => `Question ${i + 1} ("Đề bài ${i + 1}"): "${q || '(not provided)'}"\nAnswer ${i + 1} ("Câu trả lời ${i + 1}"): "${part3Answers[i] || '(no answer)'}"`).join('\n');
 
