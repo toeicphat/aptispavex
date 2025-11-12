@@ -85,7 +85,9 @@ const WritingFullTestPractice: React.FC<WritingFullTestPracticeProps> = ({ onBac
 
     const runFullTestEvaluation = async () => {
         setIsFullTestEvaluating(true);
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GOOGLE_API_KEY
+});
 
         // Helper for consistent error feedback
         const getErrorFeedback = (part: string) => ({
