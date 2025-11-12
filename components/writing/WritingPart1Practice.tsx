@@ -113,7 +113,9 @@ const WritingPart1Practice: React.FC<WritingPart1PracticeProps> = ({ onBack, onB
 
         if (!isFullTestMode) { // Perform AI evaluation only in standalone practice mode
             try {
-                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GOOGLE_API_KEY
+});
                 const promptContent = practiceQuestions.map((q, i) => 
                     `${i + 1}. Question: "${q.text}" -> Answer: "${userAnswers[i] || '(no answer)'}"`
                 ).join('\n');
