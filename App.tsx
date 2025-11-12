@@ -8,6 +8,11 @@ import SpeakingPart1Practice from './components/speaking/SpeakingPart1Practice';
 import SpeakingPart2Practice from './components/speaking/SpeakingPart2Practice';
 import SpeakingPart3Practice from './components/speaking/SpeakingPart3Practice';
 import SpeakingPart4Practice from './components/speaking/SpeakingPart4Practice';
+import WritingPractice from './components/WritingPractice';
+import WritingPart1Practice from './components/writing/WritingPart1Practice';
+import WritingPart2And3Practice from './components/writing/WritingPart2And3Practice';
+import WritingPart4Practice from './components/writing/WritingPart4Practice';
+import WritingFullTestPractice from './components/writing/WritingFullTestPractice';
 
 const ListeningIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -74,7 +79,7 @@ const sections = [
   },
 ];
 
-type View = 'main' | 'speaking' | 'speakingPart1' | 'speakingPart2' | 'speakingPart3' | 'speakingPart4';
+type View = 'main' | 'speaking' | 'speakingPart1' | 'speakingPart2' | 'speakingPart3' | 'speakingPart4' | 'writing' | 'writingPart1' | 'writingPart2And3' | 'writingPart4' | 'writingFullTest';
 
 function App() {
   const [view, setView] = useState<View>('main');
@@ -82,6 +87,8 @@ function App() {
   const handleSectionClick = (title: string) => {
     if (title === 'Speaking') {
       setView('speaking');
+    } else if (title === 'Writing') {
+      setView('writing');
     } else {
       alert(`The '${title}' section is coming soon!`);
     }
@@ -105,6 +112,22 @@ function App() {
         return <SpeakingPart3Practice onBack={() => setView('speaking')} />;
       case 'speakingPart4':
         return <SpeakingPart4Practice onBack={() => setView('speaking')} />;
+      case 'writing':
+        return <WritingPractice 
+                    onBack={() => setView('main')} 
+                    onNavigateToPart1={() => setView('writingPart1')} 
+                    onNavigateToPart2And3={() => setView('writingPart2And3')}
+                    onNavigateToPart4={() => setView('writingPart4')}
+                    onNavigateToFullTest={() => setView('writingFullTest')}
+                />;
+      case 'writingPart1':
+        return <WritingPart1Practice onBack={() => setView('writing')} />;
+      case 'writingPart2And3':
+        return <WritingPart2And3Practice onBack={() => setView('writing')} />;
+      case 'writingPart4':
+        return <WritingPart4Practice onBack={() => setView('writing')} />;
+      case 'writingFullTest':
+        return <WritingFullTestPractice onBack={() => setView('writing')} />;
       case 'main':
       default:
         return (
@@ -145,7 +168,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-sans">
-      <Header />
+      <Header onHomeClick={() => setView('main')} />
       <main className="flex-grow container mx-auto px-4 py-8 md:py-16">
         {renderContent()}
       </main>

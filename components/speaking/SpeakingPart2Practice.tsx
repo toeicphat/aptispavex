@@ -19,7 +19,6 @@ const blobToBase64 = (blob: Blob): Promise<string> => {
     });
 };
 
-    
 interface Result {
     topicId: number;
     topicText: string;
@@ -99,11 +98,9 @@ const SpeakingPart2Practice: React.FC<{ onBack: () => void }> = ({ onBack }) => 
         setIsGeneratingImage(true);
         setGeneratedImageUrl(null);
         try {
-const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GOOGLE_API_KEY
-});
+            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
             const response = await ai.models.generateImages({
-                model: 'gemini-2.5-flash',
+                model: 'imagen-4.0-generate-001',
                 prompt: `A photorealistic image depicting: ${topic.topic}`,
                 config: {
                   numberOfImages: 1,
@@ -181,7 +178,7 @@ const ai = new GoogleGenAI({
     const getAIFeedback = async (allAudioBlobs: Blob[]) => {
         setIsEvaluating(true);
         try {
-const ai = new GoogleGenAI({apiKey: import.meta.env.VITE_GOOGLE_API_KEY});
+            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
             const currentTopic = practiceQueue[currentTopicIndex];
 
             const audioParts = await Promise.all(
