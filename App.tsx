@@ -13,6 +13,11 @@ import WritingPart1Practice from './components/writing/WritingPart1Practice';
 import WritingPart2And3Practice from './components/writing/WritingPart2And3Practice';
 import WritingPart4Practice from './components/writing/WritingPart4Practice';
 import WritingFullTestPractice from './components/writing/WritingFullTestPractice';
+import ReadingPractice from './components/ReadingPractice';
+import ReadingPart1Practice from './components/reading/ReadingPart1Practice';
+import ReadingPart2And3Practice from './components/reading/ReadingPart2And3Practice';
+import ReadingPart4Practice from './components/reading/ReadingPart4Practice';
+import ReadingPart5Practice from './components/reading/ReadingPart5Practice';
 
 const ListeningIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -52,45 +57,54 @@ const sections = [
     title: 'Listening',
     description: 'Enhance your comprehension of spoken English with a variety of audio exercises.',
     icon: <ListeningIcon />,
+    isDisabled: false,
   },
   {
     id: 2,
     title: 'Reading',
     description: 'Improve your reading speed and understanding with diverse texts and questions.',
     icon: <ReadingIcon />,
+    isDisabled: false,
   },
   {
     id: 3,
     title: 'Speaking',
     description: 'Practice your pronunciation and fluency through interactive speaking tasks.',
     icon: <SpeakingIcon />,
+    isDisabled: true, // Faded
   },
   {
     id: 4,
     title: 'Writing',
     description: 'Develop your writing skills with structured exercises for emails, essays, and more.',
     icon: <WritingIcon />,
+    isDisabled: true, // Faded
   },
   {
     id: 5,
     title: 'Grammar & Vocabulary',
     description: 'Strengthen your core language skills with targeted grammar and vocabulary drills.',
     icon: <GrammarIcon />,
+    isDisabled: true, // Faded
   },
 ];
 
-type View = 'main' | 'speaking' | 'speakingPart1' | 'speakingPart2' | 'speakingPart3' | 'speakingPart4' | 'writing' | 'writingPart1' | 'writingPart2And3' | 'writingPart4' | 'writingFullTest';
+type View = 'main' | 'speaking' | 'speakingPart1' | 'speakingPart2' | 'speakingPart3' | 'speakingPart4' | 'writing' | 'writingPart1' | 'writingPart2And3' | 'writingPart4' | 'writingFullTest' | 'reading' | 'readingPart1' | 'readingPart2And3' | 'readingPart4' | 'readingPart5';
 
 function App() {
   const [view, setView] = useState<View>('main');
 
-  const handleSectionClick = (title: string) => {
-    if (title === 'Speaking') {
+  const handleSectionClick = (section: typeof sections[0]) => {
+    if (section.isDisabled) return;
+
+    if (section.title === 'Speaking') {
       setView('speaking');
-    } else if (title === 'Writing') {
+    } else if (section.title === 'Writing') {
       setView('writing');
+    } else if (section.title === 'Reading') {
+      setView('reading');
     } else {
-      alert(`The '${title}' section is coming soon!`);
+      alert(`The '${section.title}' section is coming soon!`);
     }
   };
 
@@ -128,6 +142,22 @@ function App() {
         return <WritingPart4Practice onBack={() => setView('writing')} />;
       case 'writingFullTest':
         return <WritingFullTestPractice onBack={() => setView('writing')} />;
+      case 'reading':
+        return <ReadingPractice
+                  onBack={() => setView('main')}
+                  onNavigateToPart1={() => setView('readingPart1')}
+                  onNavigateToPart2And3={() => setView('readingPart2And3')}
+                  onNavigateToPart4={() => setView('readingPart4')}
+                  onNavigateToPart5={() => setView('readingPart5')}
+              />;
+      case 'readingPart1':
+        return <ReadingPart1Practice onBack={() => setView('reading')} />;
+      case 'readingPart2And3':
+        return <ReadingPart2And3Practice onBack={() => setView('reading')} />;
+      case 'readingPart4':
+        return <ReadingPart4Practice onBack={() => setView('reading')} />;
+      case 'readingPart5':
+        return <ReadingPart5Practice onBack={() => setView('reading')} />;
       case 'main':
       default:
         return (
@@ -146,7 +176,8 @@ function App() {
                         title={section.title} 
                         description={section.description} 
                         icon={section.icon} 
-                        onClick={() => handleSectionClick(section.title)}
+                        disabled={section.isDisabled}
+                        onClick={() => handleSectionClick(section)}
                       />
                   ))}
               </div>
@@ -157,7 +188,8 @@ function App() {
                         title={section.title} 
                         description={section.description} 
                         icon={section.icon} 
-                        onClick={() => handleSectionClick(section.title)}
+                        disabled={section.isDisabled}
+                        onClick={() => handleSectionClick(section)}
                       />
                   ))}
               </div>

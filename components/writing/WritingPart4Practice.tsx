@@ -154,9 +154,7 @@ const WritingPart4Practice: React.FC<WritingPart4PracticeProps> = ({ onBack, onB
 
         if (!isFullTestMode) { // Perform AI evaluation only in standalone practice mode
             try {
-const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GOOGLE_API_KEY
-});
+                const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
                 
                 const textPart = {
                     text: `You are an expert English examiner for the official APTIS test. A student has submitted two emails for Aptis Writing Part 4.
