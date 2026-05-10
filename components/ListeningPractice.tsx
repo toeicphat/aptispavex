@@ -4,9 +4,11 @@ type ListeningPracticeProps = {
   onBack: () => void;
   onNavigateTo1_13: () => void;
   onNavigateTo14: () => void;
+  onNavigateTo15: () => void;
+  onNavigateTo16_17: () => void;
 };
 
-export default function ListeningPractice({ onBack, onNavigateTo1_13, onNavigateTo14 }: ListeningPracticeProps) {
+export default function ListeningPractice({ onBack, onNavigateTo1_13, onNavigateTo14, onNavigateTo15, onNavigateTo16_17 }: ListeningPracticeProps) {
     return (
         <div className="max-w-4xl mx-auto p-4 md:p-8">
             <button
@@ -42,17 +44,17 @@ export default function ListeningPractice({ onBack, onNavigateTo1_13, onNavigate
                     <p className="text-slate-500 dark:text-slate-400">Listen to extended monologues.</p>
                 </button>
                 <button
-                    onClick={() => alert("Coming soon!")}
-                    className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 dark:border-slate-700 text-left opacity-70"
+                    onClick={onNavigateTo15}
+                    className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border-2 border-transparent hover:border-primary text-left group"
                 >
-                    <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Question 15</h3>
-                    <p className="text-slate-500 dark:text-slate-400">Listen to conversations and answer questions.</p>
+                    <h3 className="text-2xl font-bold text-primary group-hover:text-dark dark:group-hover:text-white mb-2">Question 15</h3>
+                    <p className="text-slate-500 dark:text-slate-400">Listen to two people discussing potential modifications to a topic.</p>
                 </button>
                 <button
-                    onClick={() => alert("Coming soon!")}
-                    className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 dark:border-slate-700 text-left opacity-70"
+                    onClick={onNavigateTo16_17}
+                    className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border-2 border-transparent hover:border-primary text-left group"
                 >
-                    <h3 className="text-xl font-bold text-dark dark:text-white mb-2">Question 16-17</h3>
+                    <h3 className="text-2xl font-bold text-primary group-hover:text-dark dark:group-hover:text-white mb-2">Question 16-17</h3>
                     <p className="text-slate-500 dark:text-slate-400">Listen to longer extended monologues.</p>
                 </button>
             </div>

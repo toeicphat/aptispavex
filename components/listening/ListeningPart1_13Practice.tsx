@@ -12,7 +12,7 @@ import {
     listeningQuestions1_13_2026_1,
     listeningQuestions1_13_2026_2,
     ListeningQuestion 
-} from '../../lib/listeningQuestion1_13Data';
+} from '../../lib/Q1-13/listeningQuestion1_13Data';
 
 type Mode = 'menu' | 'practice' | 'test';
 

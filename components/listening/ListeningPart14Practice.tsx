@@ -119,81 +119,63 @@ export default function ListeningPart14Practice({ onBack }: { onBack: () => void
     const [mode, setMode] = useState<'menu' | 'practice' | 'test'>('menu');
     const [practiceSet, setPracticeSet] = useState<ListeningQuestion14[]>([]);
     
+    if (mode === 'menu') {
+        return (
+            <div className="max-w-4xl mx-auto p-4 md:p-8 relative">
+                <button
+                    onClick={onBack}
+                    className="mb-8 flex items-center text-slate-500 hover:text-primary transition-colors"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                    </svg>
+                    Back to Listening Sections
+                </button>
+                
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-dark dark:text-white mb-2">Question 14</h2>
+                    <p className="text-slate-600 dark:text-slate-300">Listen to extended monologues.</p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                    <button onClick={() => {
+                        setPracticeSet(listeningQuestions14);
+                        setMode('practice');
+                    }} className="p-8 bg-slate-50 dark:bg-slate-700 rounded-2xl hover:shadow-lg transition-all border-2 border-transparent hover:border-primary text-left group">
+                        <h3 className="text-2xl font-bold text-primary mb-2">Luyện tập <br/> (Practice Mode)</h3>
+                        <p className="text-slate-500 dark:text-slate-300">Sequential questions with unlimited audio replays and immediate feedback.</p>
+                    </button>
+                    
+                    <button onClick={() => {
+                        const randomSet = [...listeningQuestions14].sort(() => 0.5 - Math.random());
+                        setPracticeSet(randomSet);
+                        setMode('test');
+                    }} className="p-8 bg-slate-50 dark:bg-slate-700 rounded-2xl hover:shadow-lg transition-all border-2 border-transparent hover:border-secondary text-left group">
+                        <h3 className="text-2xl font-bold text-secondary mb-2">Test ngẫu nhiên <br/> (Random Test)</h3>
+                        <p className="text-slate-500 dark:text-slate-300">All questions in random order. Audio can only be played 2 times.</p>
+                    </button>
+                </div>
+            </div>
+        );
+    }
+    
     return (
         <div className="min-h-screen bg-slate-50 text-slate-800 font-sans flex flex-col">
             {/* Header */}
             <div className="flex justify-between items-center p-4 bg-white text-dark shadow-sm">
                 <div className="flex items-center">
-                    <button onClick={mode === 'menu' ? onBack : () => setMode('menu')} className="mr-3 text-dark text-xl font-medium flex items-center hover:text-primary transition-colors">
+                    <button onClick={() => setMode('menu')} className="mr-3 text-dark text-xl font-medium flex items-center hover:text-primary transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                         Aptis Keys
                     </button>
                 </div>
-                {mode !== 'menu' && (
-                    <div className="text-xl font-bold text-slate-800">
-                        Listening Part 4 (Question 14)
-                    </div>
-                )}
+                <div className="text-xl font-bold text-slate-800">
+                    Listening Part 4 (Question 14)
+                </div>
             </div>
 
             <div className="container mx-auto py-8 px-4 flex-grow max-w-4xl">
-                {mode === 'menu' ? (
-                    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="p-3 bg-red-100 text-red-600 rounded-xl">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h2 className="text-2xl font-bold text-slate-800">Listening Question 14</h2>
-                                <p className="text-slate-500">Listen to extended monologues</p>
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <button
-                                onClick={() => {
-                                    setPracticeSet(listeningQuestions14);
-                                    setMode('practice');
-                                }}
-                                className="w-full relative overflow-hidden group flex items-center justify-between p-6 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 hover:border-blue-300 rounded-xl transition-all"
-                            >
-                                <div className="text-left relative z-10">
-                                    <h3 className="text-xl font-bold text-blue-900 mb-2">Practice Mode</h3>
-                                    <p className="text-blue-700/80">Practice all {listeningQuestions14.length} questions without time limits.</p>
-                                </div>
-                                <div className="relative z-10 bg-white/50 p-2 rounded-full text-blue-600 group-hover:translate-x-1 transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </div>
-                            </button>
-
-                            <button
-                                onClick={() => {
-                                    const randomSet = [...listeningQuestions14].sort(() => 0.5 - Math.random()).slice(0, 5);
-                                    setPracticeSet(randomSet);
-                                    setMode('test');
-                                }}
-                                className="w-full relative overflow-hidden group flex items-center justify-between p-6 bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border border-purple-200 hover:border-purple-300 rounded-xl transition-all"
-                            >
-                                <div className="text-left relative z-10">
-                                    <h3 className="text-xl font-bold text-purple-900 mb-2">Random Test (5 questions)</h3>
-                                    <p className="text-purple-700/80">Test yourself with 5 random questions. Timed and restricted plays.</p>
-                                </div>
-                                <div className="relative z-10 bg-white/50 p-2 rounded-full text-purple-600 group-hover:translate-x-1 transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                ) : (
-                    <QuestionRunner mode={mode} practiceSet={practiceSet} onFinish={() => setMode('menu')} />
-                )}
+                <QuestionRunner mode={mode} practiceSet={practiceSet} onFinish={() => setMode('menu')} />
             </div>
         </div>
     );
@@ -201,7 +183,7 @@ export default function ListeningPart14Practice({ onBack }: { onBack: () => void
 
 function QuestionRunner({ mode, practiceSet, onFinish }: { mode: 'practice' | 'test', practiceSet: ListeningQuestion14[], onFinish: () => void }) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(15 * 60); // 15:00 for test
+    const [timeLeft, setTimeLeft] = useState(34 * 60); // 34:00 for test
     const [answers, setAnswers] = useState({ person1: "", person2: "", person3: "", person4: "" });
     const [showTranscript, setShowTranscript] = useState(false);
     const [showResult, setShowResult] = useState(false);
