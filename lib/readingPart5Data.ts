@@ -275,5 +275,29 @@ export const readingPart5Data: ReadingPart5Set[] = [
             "Facing this ecological crisis, the mountaineering community is being forced to shift its focus on sustainability. We are realizing that the mountains are finite resources that cannot withstand endless abuse. This creates a new imperative: implementing stricter limits on climber numbers, enforcing 'leave no trace' policies, and promoting ethical tourism. The goal is shifting from conquering the land to preserving it.",
             "Ultimately, this move toward preservation fosters a more intimate relationship with the mountain. When we stop viewing the peak as an enemy to defeat or a trophy to display, we begin to see it as a partner. This new relationship is built on humility, silence, and deep respect for the natural world. We learn to climb not just to stand on the mountain, but to be with the mountain."
         ]
+    },
+    {
+        id: 12,
+        topic: "Mountain (phiên bản 3)",
+        keywords: "Changing definition → Unique feeling → Publicity → Wrong priority → Disturbing relevant → Sustainability → Intimate relationship.",
+        tip: "Nhớ theo đoạn văn: Chúng ta bắt đầu bằng việc thay đổi định nghĩa (Changing definition) về núi, tìm kiếm cảm giác thành tựu độc nhất (Unique feeling). Nhưng sự hào nhoáng dẫn đến việc công khai thành tích (Publicity) và đặt ra ưu tiên sai lầm (Wrong priority). Điều này tạo ra một thực tế liên quan đáng ngại (Disturbing relevant). Giờ đây, ta phải tập trung vào bền vững (Focus on sustainability) để xây dựng một mối quan hệ thân mật hơn (Intimate relationship) với thiên nhiên.",
+        headings: [
+            "Our changing the perspective towards mountain",
+            "Unique sense of achievement",
+            "Publicising one’s achievements",
+            "The wrong priority",
+            "A disturbing revelation",
+            "A focus on sustainability",
+            "A more intimate relationship"
+        ],
+        paragraphs: [
+            "The term mountain has evolved over time, reflecting not only physical characteristics but also cultural significance. Before the 19th century, people were quite shy when it came to conquering mountains. Today, with the development of technology, reaching the highest peaks has become easier. In contemporary discussions, mountains may symbolize challenges to overcome or destinations for adventure, transcending their geographical attributes.",
+            "Climbing a mountain often leads to a profound sense of accomplishment. It represents not just reaching a physical summit but also conquering personal fears and pushing one's limits, creating memories that last a lifetime. Besides, mountain climbing also creates Adrenaline - a hormone that creates a feeling of excitement like when playing other extreme sports.",
+            "In today's digital age, sharing achievements has become prevalent. Even before social media, documenting climbs seemed like a given. Climbing a mountain is frequently documented on social media, turning personal milestones into public spectacles that inspire others while also raising questions about authenticity.",
+            "In recent years, some climbers have become more focused on taking photos for social media than respecting the mountains they visit. Long lines form near popular summits as people wait for the perfect picture, often ignoring weather warnings or safety advice. In some cases, this obsession with online fame has led to serious accidents. It shows how personal image is sometimes valued more than safety or responsibility.",
+            "Mount Everest, once a symbol of human courage, has now become a worrying example of how adventure can harm nature. Every climbing season, long lines of climbers crowd the narrow paths to the summit, leaving behind waste and pollution on the fragile slopes. What used to be a personal challenge has turned into a commercial race, where success is measured by photos and fame rather than respect for the mountain. This situation is disturbing because it shows how our desire to conquer the world’s highest peak has created serious environmental and moral concerns.",
+            "As the number of climbers on Mount Everest continues to rise, the need to focus on sustainability has become urgent. Local authorities and environmental groups are now introducing stricter waste management rules, encouraging climbers to bring back what they carry, and limiting the number of expeditions each season. Some teams have even started “clean-up climbs” to remove rubbish left behind on the slopes. These efforts remind us that protecting the mountain is just as important as reaching its peak. True success on Everest should mean leaving the mountain cleaner and safer for future generations.",
+            "Shared experiences in challenging environments, like mountains, can deepen intimacy in relationships. Couples or friends who navigate the challenges of climbing together often find their bonds strengthened through mutual support and understanding."
+        ]
     }
 ];

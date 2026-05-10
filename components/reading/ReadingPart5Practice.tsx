@@ -268,7 +268,7 @@ const ReadingPart5Practice: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                      Back to Menu
                 </button>
                 <div className="flex items-center gap-4">
-                     <span className="text-sm font-bold text-slate-500">Topic: {currentSet.topic}</span>
+                     <span className="text-sm font-bold text-slate-500">Topic: {currentSet.topic} ({currentIndex + 1} / {practiceSet.length})</span>
                     {mode === 'test' && (
                         <div className="text-xl font-bold text-red-600 font-mono bg-red-50 px-3 py-1 rounded">
                             {formatTime(timeLeft)}
