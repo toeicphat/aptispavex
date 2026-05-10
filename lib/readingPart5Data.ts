@@ -278,7 +278,7 @@ export const readingPart5Data: ReadingPart5Set[] = [
     },
     {
         id: 12,
-        topic: "Mountain (phiên bản 3)",
+        topic: "Mountain (phiên bản 3 - Mới)",
         keywords: "Changing definition → Unique feeling → Publicity → Wrong priority → Disturbing relevant → Sustainability → Intimate relationship.",
         tip: "Nhớ theo đoạn văn: Chúng ta bắt đầu bằng việc thay đổi định nghĩa (Changing definition) về núi, tìm kiếm cảm giác thành tựu độc nhất (Unique feeling). Nhưng sự hào nhoáng dẫn đến việc công khai thành tích (Publicity) và đặt ra ưu tiên sai lầm (Wrong priority). Điều này tạo ra một thực tế liên quan đáng ngại (Disturbing relevant). Giờ đây, ta phải tập trung vào bền vững (Focus on sustainability) để xây dựng một mối quan hệ thân mật hơn (Intimate relationship) với thiên nhiên.",
         headings: [

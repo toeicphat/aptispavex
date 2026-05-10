@@ -18,6 +18,9 @@ import ReadingPart1Practice from './components/reading/ReadingPart1Practice';
 import ReadingPart2And3Practice from './components/reading/ReadingPart2And3Practice';
 import ReadingPart4Practice from './components/reading/ReadingPart4Practice';
 import ReadingPart5Practice from './components/reading/ReadingPart5Practice';
+import ListeningPractice from './components/ListeningPractice';
+import ListeningPart1_13Practice from './components/listening/ListeningPart1_13Practice';
+import ListeningPart14Practice from './components/listening/ListeningPart14Practice';
 
 const ListeningIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -89,7 +92,7 @@ const sections = [
   },
 ];
 
-type View = 'main' | 'speaking' | 'speakingPart1' | 'speakingPart2' | 'speakingPart3' | 'speakingPart4' | 'writing' | 'writingPart1' | 'writingPart2And3' | 'writingPart4' | 'writingFullTest' | 'reading' | 'readingPart1' | 'readingPart2And3' | 'readingPart4' | 'readingPart5';
+type View = 'main' | 'listening' | 'listening1_13' | 'listening14' | 'speaking' | 'speakingPart1' | 'speakingPart2' | 'speakingPart3' | 'speakingPart4' | 'writing' | 'writingPart1' | 'writingPart2And3' | 'writingPart4' | 'writingFullTest' | 'reading' | 'readingPart1' | 'readingPart2And3' | 'readingPart4' | 'readingPart5';
 
 function App() {
   const [view, setView] = useState<View>('main');
@@ -103,6 +106,8 @@ function App() {
       setView('writing');
     } else if (section.title === 'Reading') {
       setView('reading');
+    } else if (section.title === 'Listening') {
+      setView('listening');
     } else {
       alert(`The '${section.title}' section is coming soon!`);
     }
@@ -110,6 +115,16 @@ function App() {
 
   const renderContent = () => {
     switch(view) {
+      case 'listening':
+        return <ListeningPractice
+                  onBack={() => setView('main')}
+                  onNavigateTo1_13={() => setView('listening1_13')}
+                  onNavigateTo14={() => setView('listening14')}
+               />;
+      case 'listening1_13':
+        return <ListeningPart1_13Practice onBack={() => setView('listening')} />;
+      case 'listening14':
+        return <ListeningPart14Practice onBack={() => setView('listening')} />;
       case 'speaking':
         return <SpeakingPractice 
                   onBack={() => setView('main')} 
